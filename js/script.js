@@ -51,11 +51,11 @@ document.getElementById("checkoutBtn").onclick = () => {
 
 document.getElementById("checkoutForm").onsubmit = e => {
   e.preventDefault();
-  alert("✅ Pago simulado correctamente");
-  cart = [];
-  updateCart();
-  checkoutModal.classList.add("hidden");
-  cartPanel.classList.add("hidden");
+
+  // 🔗 REDIRECCIÓN A STRIPE
+  window.location.href = "https://buy.stripe.com/test_TU_LINK_AQUI";
+};
+
 };
 
 renderProducts();
