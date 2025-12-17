@@ -19,7 +19,11 @@ let cart = [];
 function renderProducts() {
   grid.innerHTML = products.map(p => `
     <div class="card">
-      <img src="${p.images[0]}" alt="${p.name}" loading="lazy">
+      <img src="${p.images[0]}"
+     alt="${p.name}"
+     loading="lazy"
+     onerror="this.src='./images/products/fallback.webp'">
+
       <img src="${p.images[1] || p.images[0]}" class="hover" alt="">
 
       <div class="body">
